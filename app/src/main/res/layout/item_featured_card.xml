@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="160dp"
+    android:layout_height="250dp"
+    android:layout_marginEnd="12dp"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="3dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="8dp">
+
+        <ImageView
+            android:id="@+id/img_featured"
+            android:layout_width="match_parent"
+            android:layout_height="170dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/top" />
+
+        <TextView
+            android:id="@+id/tv_featured_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cute Top"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:layout_marginTop="8dp"/>
+
+        <TextView
+            android:id="@+id/tv_featured_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="₹799"
+            android:textSize="13sp"
+            android:textColor="#555"/>
+
+        <ImageButton
+            android:id="@+id/btn_featured_add"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_gravity="end"
+            android:background="@drawable/bg_circle_white"
+            android:src="@android:drawable/ic_input_add"
+            android:tint="@android:color/black"/>
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

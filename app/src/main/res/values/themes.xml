@@ -1,0 +1,53 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. Updated to MaterialComponents to avoid the "Bag" error -->
+    <style name="Theme.SavanaApp" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand colors. -->
+        <item name="colorPrimary">@color/accent_rose</item>
+        <item name="colorPrimaryVariant">@color/accent_pink</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand colors. -->
+        <item name="colorSecondary">@color/accent_pink</item>
+        <item name="colorOnSecondary">@color/black</item>
+
+        <!-- Status Bar and Background -->
+        <item name="android:colorBackground">@color/white</item>
+        <item name="android:statusBarColor">@color/white</item>
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+
+    <!-- Splash Screen Theme -->
+    <style name="Theme.SavanaApp.Splash" parent="Theme.SavanaApp">
+        <item name="android:statusBarColor">@color/splash_bg</item>
+        <item name="android:windowLightStatusBar">false</item> <!-- Set to false if splash_bg is dark -->
+    </style>
+
+    <!-- Custom Widget Styles (Now compatible because parent is MaterialComponents) -->
+    <style name="CardStyle" parent="Widget.MaterialComponents.CardView">
+        <item name="cardCornerRadius">16dp</item>
+        <item name="cardElevation">4dp</item>
+        <item name="cardBackgroundColor">@color/white</item>
+    </style>
+
+    <style name="ButtonPrimary" parent="Widget.MaterialComponents.Button">
+        <item name="backgroundTint">@color/button_bg</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">13sp</item>
+        <item name="cornerRadius">8dp</item>
+    </style>
+
+    <style name="ButtonOutline" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="strokeColor">@color/button_bg</item>
+        <item name="android:textColor">@color/button_bg</item>
+        <item name="android:textSize">13sp</item>
+        <item name="cornerRadius">8dp</item>
+    </style>
+
+    <!-- Text Styles -->
+    <style name="PriceText">
+        <item name="android:textColor">@color/price_color</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+</resources>

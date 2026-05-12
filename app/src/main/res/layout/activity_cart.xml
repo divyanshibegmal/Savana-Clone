@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/light_gray">
+
+    <!-- Toolbar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingStart="8dp"
+        android:paddingEnd="16dp"
+        android:background="@color/white"
+        android:elevation="4dp">
+        <ImageView android:id="@+id/btn_back"
+            android:layout_width="40dp" android:layout_height="40dp"
+            android:src="@drawable/ic_back" android:padding="8dp"
+            android:clickable="true" android:focusable="true"/>
+        <TextView android:id="@+id/tv_toolbar_title"
+            android:layout_width="0dp" android:layout_height="wrap_content"
+            android:layout_weight="1" android:textSize="18sp" android:textStyle="bold"
+            android:textColor="@color/black" android:gravity="center" android:paddingEnd="40dp"/>
+    </LinearLayout>
+
+    <!-- Cart Content -->
+    <LinearLayout android:id="@+id/layout_cart_content"
+        android:layout_width="match_parent" android:layout_height="0dp"
+        android:layout_weight="1" android:orientation="vertical">
+
+        <!-- Items count bar -->
+        <TextView android:id="@+id/tv_item_count"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:textSize="13sp" android:textColor="@color/dark_gray"
+            android:padding="16dp" android:background="@color/white"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_cart_items"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+        <!-- Order Summary -->
+        <LinearLayout android:id="@+id/layout_order_summary"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical" android:background="@color/white"
+            android:padding="16dp">
+
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:text="Order Summary" android:textSize="15sp" android:textStyle="bold"
+                android:textColor="@color/black" android:paddingBottom="10dp"/>
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:paddingBottom="6dp">
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:text="Subtotal" android:textSize="13sp" android:textColor="@color/dark_gray"/>
+                <TextView android:id="@+id/tv_subtotal" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:textSize="13sp" android:textColor="@color/black"/>
+            </LinearLayout>
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:paddingBottom="6dp">
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:text="Shipping" android:textSize="13sp" android:textColor="@color/dark_gray"/>
+                <TextView android:id="@+id/tv_shipping" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:textSize="13sp" android:textColor="@color/black"/>
+            </LinearLayout>
+
+            <View android:layout_width="match_parent" android:layout_height="1dp"
+                android:background="@color/divider" android:layout_marginVertical="8dp"/>
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:text="Total" android:textSize="15sp"
+                    android:textStyle="bold" android:textColor="@color/black"/>
+                <TextView android:id="@+id/tv_final_total" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:textSize="15sp"
+                    android:textStyle="bold" android:textColor="@color/price_color"/>
+            </LinearLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_checkout"
+                android:layout_width="match_parent" android:layout_height="52dp"
+                android:layout_marginTop="12dp"
+                android:text="Proceed to Checkout"
+                android:textSize="15sp" android:textColor="@color/white"
+                android:background="@drawable/bg_checkout_btn"
+                app:backgroundTint="@null"
+                app:cornerRadius="16dp"/>
+
+            <TextView android:id="@+id/tv_total_price"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:visibility="gone"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Empty Cart -->
+    <LinearLayout android:id="@+id/layout_empty_cart"
+        android:layout_width="match_parent" android:layout_height="0dp"
+        android:layout_weight="1" android:orientation="vertical"
+        android:gravity="center" android:padding="32dp" android:visibility="gone">
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="🛍️" android:textSize="72sp"/>
+        <TextView android:id="@+id/tv_empty_cart"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Your bag is empty" android:textSize="20sp" android:textStyle="bold"
+            android:textColor="@color/black" android:layout_marginTop="16dp"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Add items you love to your bag" android:textSize="14sp"
+            android:textColor="@color/dark_gray" android:layout_marginTop="8dp"/>
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_shop_now"
+            android:layout_width="wrap_content" android:layout_height="48dp"
+            android:layout_marginTop="24dp"
+            android:text="Start Shopping"
+            android:textColor="@color/white"
+            app:backgroundTint="@color/button_bg"
+            app:cornerRadius="12dp"/>
+    </LinearLayout>
+
+    <!-- Bottom Nav -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_nav"
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:background="@color/white"
+        app:menu="@menu/bottom_nav_menu"
+        app:itemIconTint="@color/nav_unselected"
+        app:itemTextColor="@color/nav_unselected"
+        app:itemActiveIndicatorStyle="@android:color/transparent"
+        app:labelVisibilityMode="labeled"/>
+
+</LinearLayout>
