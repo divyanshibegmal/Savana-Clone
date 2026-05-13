@@ -44,7 +44,7 @@ public class SearchActivity extends AppCompatActivity {
     }
 
     private void initViews() {
-        searchBar = findViewById(R.id.et_search_main);
+        searchBar = findViewById(R.id.et_search);
         recyclerView = findViewById(R.id.rv_search_results);
         tvResultInfo = findViewById(R.id.tv_result_info);
         layoutCategories = findViewById(R.id.layout_categories_browse);

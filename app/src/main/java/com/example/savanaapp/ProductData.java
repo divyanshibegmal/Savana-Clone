@@ -6,6 +6,24 @@ import java.util.stream.Collectors;
 
 public class ProductData {
 
+    // ================= DISCOUNTED ITEMS =================
+    public static List<Product> getDiscountedProducts() {
+        List<Product> products = new ArrayList<>();
+        products.add(new Product(303, "Leather Crossbody Bag", "Accessories", 29.99, 55.00, R.drawable.ic_bag, "Premium faux leather crossbody bag.", 4.8f, 60));
+        products.add(new Product(101, "Polka Dot Puff Sleeve Top", "Tops", 15.99, 22.00, R.drawable.top1, "A stylish polka dot top with puff sleeves.", 4.6f, 128));
+        products.add(new Product(204, "Pink Makeup Bag", "Beauty", 9.99, 19.99, R.drawable.beauty4, "Spacious and stylish pink makeup organizer.", 5.0f, 92));
+        products.add(new Product(205, "Luxury Lip Gloss", "Beauty", 7.99, 14.99, R.drawable.beauty5, "High-shine luxury lip gloss in various shades.", 4.5f, 215));
+        products.add(new Product(501, "High Waisted Jeans", "Bottoms", 29.99, 50.00, R.drawable.top1, "Classic high waisted denim jeans.", 4.6f, 310));
+        products.add(new Product(104, "Satin Cami Top", "Tops", 17.99, 32.00, R.drawable.top4, "Elegant satin cami top for evening wear.", 4.3f, 84));
+        products.add(new Product(105, "Ribbed Casual Top", "Tops", 13.99, 24.00, R.drawable.top5, "Versatile ribbed top for everyday comfort.", 4.1f, 156));
+        products.add(new Product(206, "Skincare Essentials Kit", "Beauty", 21.99, 39.99, R.drawable.beauty6, "Set of 5 essential skincare products.", 4.2f, 110));
+        products.add(new Product(207, "Compact Mirror Set", "Beauty", 6.99, 12.99, R.drawable.beauty7, "Double-sided compact mirror with LED light.", 4.0f, 65));
+        products.add(new Product(602, "Sports Bra", "Activewear", 15.99, 28.00, R.drawable.top5, "Supportive sports bra for high-impact workouts.", 4.7f, 180));
+        products.add(new Product(401, "Summer Maxi Dress", "Dresses", 24.99, 45.00, R.drawable.top2, "Flowy summer maxi dress with floral pattern.", 4.7f, 140));
+        products.add(new Product(402, "Little Black Dress", "Dresses", 34.99, 60.00, R.drawable.top4, "Classic little black dress for any occasion.", 4.9f, 200));
+        return products;
+    }
+
     // ================= TOPS =================
     public static List<Product> getTopsProducts() {
         List<Product> products = new ArrayList<>();
